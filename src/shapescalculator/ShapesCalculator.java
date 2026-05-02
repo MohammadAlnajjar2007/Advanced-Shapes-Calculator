@@ -11,14 +11,15 @@ public class ShapesCalculator {
         System.out.println("--------------------------");
         System.out.println("Welcome to Shapes Calculator");
         System.out.println("--------------------------");
-        while(choice!=4)
+        while(choice!=5)
         {
             System.out.println("Choose a shape:");
             System.out.println("1.Rictangle");
             System.out.println("2.Circle");
             System.out.println("3.Square");
-            System.out.println("4.Exit");
-            System.out.println("Enter your choice (1-4):");
+            System.out.println("4.Cuboid");
+            System.out.println("5.Exit");
+            System.out.println("Enter your choice (1-5):");
              choice=cin.nextInt();
              if(choice==1)
              {
@@ -48,12 +49,26 @@ public class ShapesCalculator {
                  System.out.println(S1);
              }
              else if(choice==4)
+                     {
+                         System.out.println("Enter the length of the cuboid:");
+                         double length=cin.nextDouble();
+                         System.out.println("Enter the width of the cuboid:");
+                         double width=cin.nextDouble();
+                         System.out.println("Enter the height of the cuboid:");
+                         double height=cin.nextDouble();
+                         Cuboid Cu1=new Cuboid();
+                                 Cu1.setLength(length);
+                                 Cu1.setWidth(width);
+                                 Cu1.setHeight(height);
+                                 System.out.println(Cu1);
+                     }
+             else if(choice==5)
              {
                  System.out.println("Thank you for using the Shapes Calculator (:");
              }
              else 
              {
-                 System.out.println("Invalid choice! Please enter a number between 1 and 4.");
+                 System.out.println("Invalid choice! Please enter a number between 1 and 5.");
              }
         }
     }
